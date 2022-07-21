@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700&family=Righteous&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Recursive', sans-serif;
+    font-family: 'Righteous', cursive;
+}
+body{
+    background-color:#FB6B6B;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Recursive', sans-serif;
+}
+.initial{
+    top: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.initial img{
+    width: 136px;
+    height: 161px;
+    margin-bottom: 13px;
+}
+.initial h1{
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: -1.2%;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+.initial div{
+    width: 246px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FFFFFF;
+    border: 1px solid #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #D70900;
+    cursor: pointer;
+}
+.initial div:hover, .initial div:active{
+    filter: brightness(80%);
+}
