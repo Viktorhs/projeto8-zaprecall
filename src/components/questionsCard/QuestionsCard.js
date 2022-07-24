@@ -2,7 +2,7 @@ import React from "react"
 import play from "../../assets/images/Vector.svg"
 import turn from "../../assets/images/seta.svg"
 
-export default function Card({id, deck, setCheck, setDontRemember, check}){
+export default function Card({id, question, answer, setCheck, setDontRemember, check}){
     const[cardStatus, setCardStatus] = React.useState('closed')
     const[color, setColor] = React.useState('')
     const[icon, setIcon] = React.useState('')
@@ -19,7 +19,7 @@ export default function Card({id, deck, setCheck, setDontRemember, check}){
         }
         setCardStatus('answered ')
     }
-    console.log(cardStatus)
+    
     return(
         <li className={cardStatus + color}>
             {cardStatus === 'closed' &&
@@ -31,13 +31,13 @@ export default function Card({id, deck, setCheck, setDontRemember, check}){
             
             {cardStatus === 'question' &&
             <>
-                <p>{deck.question}</p>
+                <p>{question}</p>
                 <img src = {turn} alt="play" onClick={() => setCardStatus('answer')}/>
             </>}
 
             {cardStatus === 'answer' &&
                 <>
-                    <p>{deck.answer}</p>
+                    <p>{answer}</p>
                     <div className = "status">
                         <span onClick={() => buttonAnswer('close-circle-sharp')}>Não lembrei</span>
                         <span onClick={() => buttonAnswer("help-circle-sharp")}>Quase não lembrei</span>

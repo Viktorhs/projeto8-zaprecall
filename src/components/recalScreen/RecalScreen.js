@@ -32,11 +32,10 @@ export default function RecalScreen({logo}){
     ]
 
     let deckRender = [...questionsReact]
-    deckRender.sort(() => Math.random() - 0.5 )
-    console.log(deckRender)
+    deckRender.sort(() => Math.random() - 0.5)
     let [check, setCheck] = React.useState([])
     let [dontRemember, setDontRemember] = React.useState(false)
-    console.log(deckRender.map((item, key) => <Card key={key} id={key} deck = {item} setCheck = {setCheck} setDontRemember={setDontRemember} check = {check}/>))
+
     return(
         <>  
             <div className="recall">
@@ -44,7 +43,7 @@ export default function RecalScreen({logo}){
                 <h1>ZapRecall</h1>
             </div>
             <ul className="cards-recall">
-                {deckRender.map((item, key) => <Card key={key} id={key} deck = {item} setCheck = {setCheck} setDontRemember={setDontRemember} check = {check}/>)}
+                {deckRender.map((item, key) => <Card key={key} id={key} question = {item.question} answer={item.answer} setCheck = {setCheck} setDontRemember={setDontRemember} check = {check}/>)}
             </ul>
                 <Footer deck = {deckRender} check = {check} dontRemember={dontRemember} />
         </>
