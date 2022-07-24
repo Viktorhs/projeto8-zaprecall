@@ -53,6 +53,8 @@ body{
     line-height: 22px;
     color: #D70900;
     cursor: pointer;
+
+    transition: 200ms;
 }
 .initial div:hover, .initial div:active{
     filter: brightness(80%);
